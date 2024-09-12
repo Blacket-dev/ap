@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contactForm" name="sentMessage" action="appointment.php" method="POST" novalidate>
+        <!-- Name Input -->
+        <div class="form-group">
+            <input type="text" class="form-control border-0 p-4" id="name" name="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name." />
+            <p class="help-block text-danger"></p>
+        </div>
+        <!-- Email Input -->
+        <div class="form-group">
+            <input type="email" class="form-control border-0 p-4" id="email" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email address." />
+            <p class="help-block text-danger"></p>
+        </div>
+        <!-- Date and Time Picker Inputs -->
+        <div class="form-row">
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="date" id="date" data-target-input="nearest">
+                        <input type="text" class="form-control border-0 p-4 datetimepicker-input" name="date" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker" required="required" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="time" id="time" data-target-input="nearest">
+                        <input type="text" class="form-control border-0 p-4 datetimepicker-input" name="time" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker" required="required" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service Selection Dropdown -->
+        <div class="form-group">
+            <select class="custom-select border-0 px-4" style="height: 47px;" name="service" required="required" data-validation-required-message="Please select a service.">
+                <option selected disabled>Select A Service</option>
+                <option value="Service 1">Service 1</option>
+                <option value="Service 2">Service 2</option>
+                <option value="Service 3">Service 3</option>
+            </select>
+            <p class="help-block text-danger"></p>
+        </div>
+        <!-- Message Input -->
+        <div class="form-group">
+            <textarea class="form-control border-0 p-4" id="message" name="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message." rows="4"></textarea>
+            <p class="help-block text-danger"></p>
+        </div>
+        <!-- Success Message Placeholder -->
+        <div id="success"></div>
+        <!-- Submit Button -->
+        <div>
+            <button class="btn btn-primary btn-block border-0 py-3" id="sendMessageButton" type="submit">Get An Appointment</button>
+        </div>
+    </form>
+    
+</body>
+</html>
